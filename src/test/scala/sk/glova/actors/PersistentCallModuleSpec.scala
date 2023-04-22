@@ -7,9 +7,9 @@ import sk.glova.monitoringsystem.actors.PersistentCallModule.{CallModuleCreatedR
 
 class PersistentCallModuleSpec extends ScalaTestWithActorTestKit with AnyWordSpecLike {
 
-  "PersistentTelephoneModule actor" must {
+  "PersistentCallModule actor" must {
 
-    "reply with empty list if no call was added" in {
+    "reply call module created response when create call module" in {
       val responseProbe = createTestProbe[Response]()
       val deviceActor = spawn(PersistentCallModule("id"))
 
