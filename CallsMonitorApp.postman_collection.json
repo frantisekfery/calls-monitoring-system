@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "91772045-56e3-468a-9f65-02d0892b50d1",
+		"name": "CallsMonitorApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11300983"
+	},
+	"item": [
+		{
+			"name": "CreateTelephoneModule (Zoom)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"source\": \"zoom\",\r\n    \"protocol\": \"protocol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monitor/manager/module",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						"manager",
+						"module"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTelephoneModule (Skype)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"source\": \"zoom\",\r\n    \"protocol\": \"protocol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monitor/manager/module",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						"manager",
+						"module"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCall 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"TODO\",\r\n    \"startOfCall\": \"startOfCall\",\r\n    \"endOfCall\": \"endOfCall\",\r\n    \"duration\": \"duration\",\r\n    \"callerNumber\": \"callerNumber\",\r\n    \"recipientNumber\": \"recipientNumber\",\r\n    \"status\": \"status\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monitor/manager",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						"manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCall 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"TODO\",\r\n    \"startOfCall\": \"startOfCall\",\r\n    \"endOfCall\": \"endOfCall\",\r\n    \"duration\": \"duration\",\r\n    \"callerNumber\": \"callerNumber\",\r\n    \"recipientNumber\": \"recipientNumber\",\r\n    \"status\": \"status\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monitor/manager",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						"manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTelephoneModuleById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monitor/manager/module/TODO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						"manager",
+						"module",
+						"564d9437-aa48-4aff-8835-587179b8c625"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTelephoneModules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monitor/manager/module",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						"manager",
+						"module"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
