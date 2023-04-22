@@ -1,8 +1,6 @@
 # Call monitoring system
 
-This is a demo app for testing Scala with Akka framework created as a Scala Academy Assessment project. You can find the work 
-assignment [here](https://hotovo.jira.com/wiki/spaces/HTO/pages/3960995859/Scala+Academy+Assessment+project). The assignment 
-has been slightly accommodated.
+This is a demo app for testing Scala with Akka framework created as a Scala Academy Assessment project. You can find the work assignment [here](https://hotovo.jira.com/wiki/spaces/HTO/pages/3960995859/Scala+Academy+Assessment+project). The assignment has been slightly accommodated.
 
 ### Dependencies needed:
 - Docker (download [here](https://www.docker.com/products/docker-desktop/))
