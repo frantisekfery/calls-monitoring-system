@@ -12,6 +12,6 @@ has been slightly accommodated.
 ### How to run the program:
 
 1. Open project in your favourite IDE
-2. From terminal run command: `docker-compose up`. It will start cassandra in docker
+2. From terminal run command: `docker-compose up`. It will start cassandra in docker.
 3. Run App from [here](src/main/scala/sk/glova/monitoringsystem/app/App.scala)
 4. Run calls from Postman (you can import prepared [collection](postman_collection.json) into Postman)
