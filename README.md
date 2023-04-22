@@ -15,4 +15,3 @@ accommodated.
 2. from terminal run command: `docker-compose up`
 3. run App
 4. run calls from Postman
-
