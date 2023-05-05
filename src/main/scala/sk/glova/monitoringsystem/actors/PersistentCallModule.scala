@@ -9,7 +9,7 @@ import scala.util.{Success, Try}
 
 object PersistentCallModule {
 
-  trait Command
+  trait Command //TODO sealed
   case class CreateCallModule(source: String, protocol: String, replyTo: ActorRef[Response]) extends Command
   case class AddCall(id: String, call: Call, replyTo: ActorRef[Response]) extends Command
   case class GetCallModule(id: String, replyTo: ActorRef[Response]) extends Command
