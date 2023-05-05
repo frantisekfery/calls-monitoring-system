@@ -33,25 +33,16 @@ object App {
   }
 
   def main(args: Array[String]): Unit = {
-    trait RootCommand
-    case class RetrieveCallMonitorActor(replyTo: ActorRef[ActorRef[Command]]) extends RootCommand
 
-    val rootBehaviour: Behavior[RootCommand] = Behaviors.setup { context =>
+    val rootBehaviour = Behaviors.setup[Nothing] { context =>
       val moduleManager = context.spawn(CallModuleManager(), "module-manager")
 
-      Behaviors.receiveMessage {
-        case RetrieveCallMonitorActor(replyTo) =>
-          replyTo ! moduleManager
-          Behaviors.same
-      }
+      startHttpServer(moduleManager)(context.system)
+
+      Behaviors.empty
+
     }
 
-    implicit val system: ActorSystem[RootCommand] = ActorSystem(rootBehaviour, "CallMonitorSystem")
-    implicit val timeout: Timeout = Timeout(5.seconds)
-    implicit val ec: ExecutionContext = system.executionContext
-    implicit val scheduler: Scheduler = system.scheduler
-
-    val callMonitorActorFuture: Future[ActorRef[Command]] = system.ask(replyTo => RetrieveCallMonitorActor(replyTo))
-    callMonitorActorFuture.foreach(startHttpServer)
+    ActorSystem[Nothing](rootBehaviour, "CallMonitorSystem")
   }
 }
